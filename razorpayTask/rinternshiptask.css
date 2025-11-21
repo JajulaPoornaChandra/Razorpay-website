@@ -1,0 +1,3175 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+*{margin: 0px;}
+/* #sticky-navbar{} */
+.razorpaylogo{
+    width: 125px;
+    height: 120px;
+    cursor: pointer;
+}
+body{
+    overflow-x: hidden;
+}
+.logo{
+    /* background-color: rgb(242, 242, 255); */
+    background-color: white;
+    width: 100%;
+    height: 80px;
+
+    position: sticky;
+    top: 0px;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    /* float: left; */
+    z-index: 1000;
+}
+ul{
+    padding-left: 5px;
+}
+/* li{
+    list-style-type: none;
+    display: inline;
+    padding-left: 12px;
+    font-family: sans-serif;
+    padding:0 10px;
+}
+li:after{
+    content: "";
+    background-color:aqua;
+    height: 3px;
+    width: 0;
+    left: 0;
+    border-bottom: -100px;
+}
+li:hover:after{
+    color:rgb(48, 94,255);
+    width: 100%;
+    border-bottom: 3px solid rgb(48, 94,255);
+} */
+
+li{
+    display: inline-block;
+    /* padding:-1px 15px; */
+    font-family: sans-serif;
+    position: relative; /* required for ::after positioning */
+    cursor: pointer;
+    padding: 0px 6px;
+    }
+li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px; /* place underline at bottom */
+    width: 0%;
+    height: 3px;
+    background-color: rgb(48, 94, 255);
+    transition: width 0.5s ease-in-out; /* smooth animation */  
+}
+li:hover{
+    color: rgb(48, 94, 255);
+}
+li:hover::after {
+    width: 100%;
+}
+.dropdown{
+    display: none;
+}
+li:hover .dropdown{
+    border: 1px solid;
+    display: block;
+    position: absolute;
+    width:950px;
+    height: 400px;
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.accept{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 35px;
+    padding-top: 20px;
+
+}
+.payment-aggre{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.payment-accept{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.payment-gate{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top:20px;
+}
+.payment-ouwebsite{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.payment-link{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top:20px;
+}
+.payment-create{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.payment-page{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top:20px;
+}
+.payment-get{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.payment-qr{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top:20px;
+}
+.payment-multi{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.payment-upi{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top:20px;
+}
+.payment-discover{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.payment-magic{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: -288px;
+    padding-left: 350px;
+}
+.payment-improve{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.payment-sub{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.payment-collect{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.payment-instant{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.payment-customer{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.payment-optimizer{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.payment-manage{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.payments-apayments{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 350px;
+    padding-top: 23px;
+}
+.payment-rpaypos{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top:34px;
+}
+.payment-instore{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.payments-allinone{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left:650px;
+    margin-top: -322px;
+}
+.payment-omni{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 650px;
+    padding-top: 20px;
+}
+.payment-oneplatform{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 650px;
+}
+.payment-international{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left:650px;
+    padding-top:24px;
+}
+.payment-intern-payments{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 650px;
+    padding-top: 20px;
+}
+.payment-across{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 650px;
+}
+.payment-bank{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 650px;
+    padding-top: 20px;
+}
+.payment-usd{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 650px;
+}
+.payment-build{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left:650px;
+    padding-top:24px;
+}
+.payment-india{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 650px;
+    padding-top: 20px;
+}
+.payment-inr{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 650px;
+}
+.banking-dropdown1{
+    display: none;
+}
+li:hover .banking-dropdown1{
+    border: 1px solid;
+    display: block;
+    position: absolute;
+    width:950px;
+    height: 400px;
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.banking-business{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+.banking-razorpay{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.banking-businessuper{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.banking-source{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.banking-integrated{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.banking-payouts{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.banking-instant{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.banking-links{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.banking-sendmoney{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.banking-view{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.banking-razorpaysee{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 34px;
+}
+.banking-current{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    margin-top: -237px;
+}
+.banking-supercharged{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.banking-escrow{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.banking-e-account{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.banking-forex{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.banking-expert{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.banking-bank{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.banking-instantly{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.banking-tax{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 350px;
+    padding-top: 20px;
+}
+.banking-pay{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 350px;
+}
+.banking-lending{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left:650px;
+    margin-top: -237px;
+}
+.banking-f-complaint{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    font-size: 11px;
+    padding-left: 650px;
+}
+.banking-corporate{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left:650px;
+    padding-top: 20px;
+}
+.banking-streamline{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    padding-left:650px;
+    font-size: 11px;
+}
+.banking-digital{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left:650px;
+    padding-top: 20px;
+}
+.banking-r-capital{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left:650px;
+    padding-top:15px;
+}
+.banking-get{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    padding-left:650px;
+    font-size: 11px;
+}
+.banking-start{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left:650px;
+    padding-top:15px;
+}
+.banking-company{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left:650px;
+    padding-top:13px;
+}
+.banking-simplify{
+    color: rgb(118, 142, 167);
+    font-family: sans-serif;
+    padding-left:650px;
+    font-size: 11px;
+}
+.payroll-dropdown{
+    display: none;
+}
+li:hover .payroll-dropdown{
+    border: 1px solid;
+    display: block;
+    position: absolute;
+    width:250px;
+    height:130px;
+    margin-top: 10px;
+    margin-left: -95px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.y-payroll{
+    color: rgb(125, 125, 125);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.payroll-startups{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.payroll-enterprises{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left:20px;
+    padding-top: 10px;
+}
+.dropdown-partners{
+    display: none;
+}
+li:hover .dropdown-partners{
+    border: 1px solid;
+    display: block;
+    position: absolute;
+    width:230px;
+    height:130px;
+    margin-top: 10px;
+    margin-left: -95px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.partners-program{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.partners-razorpay{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.dropdown-resources{
+    display: none;
+}
+li:hover .dropdown-resources{
+    border: 1px solid;
+    display: block;
+    position: absolute;
+    width:800px;
+    height: 350px;
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    margin-left: -350px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.resources-awareness{
+    color:rgb(138, 138, 138);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.resources-blog{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.resources-learn{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.resources-events{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-weight:600;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.resources-white{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-weight:600;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.resources-customer{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-weight:600;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.resources-developers{
+    color:rgb(138, 138, 138);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left:200px;
+    margin-top: -218px;
+}
+.resources-ddocs{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left: 200px;
+    padding-top: 30px;
+    font-weight:600;
+}
+.resources-integration{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:200px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-apireference{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:200px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-apipg{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left: 200px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-onboarding{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:200px;
+    padding-top: 20px;
+    font-weight: 600;
+}
+.resources-solution{
+    color:rgb(138, 138, 138);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 400px;
+    margin-top: -218px;
+}
+.resources-saas{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left: 400px;
+    padding-top: 30px;
+    font-weight:600;
+}
+.resources-ecommerce{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:400px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-education{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:400px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-bfsi{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:400px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-free{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:400px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-freetool{
+    color:rgb(138, 138, 138);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 600px;
+    margin-top: -218px;
+}    
+.resources-gst{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:600px;
+    padding-top: 30px;
+    font-weight:600;
+}
+.resources-online{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:600px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-gstnumber{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:600px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-gst-search{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:600px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-roi{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:600px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-cagr{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    padding-left:600px;
+    padding-top: 20px;
+    font-weight:600;
+}
+.resources-editda{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left:600px;
+    padding-top: 20px;
+}
+.hs-icon{
+    font-size: x-large;
+    padding-left: 186px;
+}
+.flag{
+    width: 32px;
+    height: 35px;
+    padding-left: 27px;
+}
+.right-icon{
+    display: flex;
+    align-items: center;
+}
+.loginbtn{
+    border: 1px solid rgb(48, 94, 255);
+    font-weight: bold;
+    color: rgb(48, 94, 255);
+    padding: 11px 17px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 255);
+}
+.loginbtn-1{
+    padding-left: 27px;
+}
+.loginbtn:hover{
+    background-color:rgb(242, 242, 255);
+}
+.btnsignup{
+    background-color: rgb(48, 94, 255);
+    font-weight: bold;
+    color: white;
+    padding: 12px 20px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: none;
+}
+.btnsignup-1{
+    padding-left: 27px;
+}
+.btnsignup:hover{
+    background-color:rgb(41, 79, 217);
+}
+#navbar{
+    background-color: rgb(230, 239, 244);
+    width: 100%;
+    opacity: 1;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.money-saver{
+    font-family: sans-serif;
+    padding-left: 110px;
+    font-size: 17px;
+}
+.export-account{
+    font-family: sans-serif;
+    padding-left:5px;
+    font-size: 17px;
+    color:rgb(48, 94, 255);
+}
+.forex{
+    font-family: system-ui;
+    padding-left: 41px;
+    font-size: 15px;
+    color: rgb(64, 86, 109);
+}
+.sign-now{
+    color: rgb(41, 80, 218);
+    font-weight: bolder;
+    font-family: sans-serif;
+    padding-left: 3px;
+}
+.ballsicon-image{
+    width: 180px;
+    padding-left: 118px;
+}
+.middle-images{
+    width:100%;
+    height:700px;
+    /* background-color:rgb(235, 241, 255); */
+    /* background-color: rgb(242, 243, 255); */
+    background-color: rgb(240, 247, 255);
+    padding-right: 61px;
+}
+.international-payment{
+    font-family: sans-serif;
+    color:rgb(48, 94, 255);
+    font-size: 41px;
+    padding-left: 50px;
+    padding-top: 140px;
+}
+.for-indias{
+    font-family: sans-serif;
+    color:rgb(25, 39, 56);
+    font-size: 41px;
+    padding-left: 50px;
+}
+.accept-cards{
+    /* color: rgb(104, 122, 143); */
+    color: #4a6076;
+    padding-left: 52px;
+    font-family: sans-serif;
+    font-size: 14.5px;
+    padding-top: 12px;
+}
+.supnow{
+    /* background-color: rgb(48, 94, 255);
+    font-weight: bold;
+    color: white;
+    padding: 12px 20px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: none; */
+
+    background-color: rgb(48, 94, 255);
+    font-weight: bold;
+    color: white;
+    padding: 12px 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+}
+.supnow1{
+    padding-left: 50px;
+    padding-top: 25px;
+}
+.span-know{
+    display: flex;
+    color: rgb(41, 79, 217);
+    margin-top: -32px;
+    font-family: sans-serif;
+    padding-left: 225px;
+}
+.bg-frame{
+    height:487px;
+    width: 465px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 740px;
+    margin-top: -283px;
+}
+.slide1-img{
+    /* height: 450px;
+    display: block;
+    margin-top: -450px;
+    width: 360px;
+    padding-left: 570px; */
+
+    height: 400px;
+    display: block;
+    margin-top: -400px;
+    width: 365px;
+    padding-left: 540px;
+}
+.masaba{
+    /* color: rgb(211, 204, 255);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px; */
+    color: rgb(211, 204, 255);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    font-size: 75px;
+    justify-content: center;
+    margin-top: -100px;
+    padding-left: 482px;
+}
+.houseofpower{
+    height: 400px;
+}
+.houseofpower1{
+    display: flex;
+    justify-content: end;
+    /* display: inline; */
+    margin-top: -400px;
+    padding-right: 152px;
+}
+.middle-images1{
+    width: 100%;
+    height: 700px;
+    /* background-color:aqua; */
+    background-color: rgb(240, 247, 255);
+
+}
+.Advanced-payment{
+    font-family: sans-serif;
+    color:rgb(48, 94, 255);
+    font-size: 41px;
+    padding-left: 50px;
+    padding-top: 140px;
+}
+.for-india2{
+    font-family: sans-serif;
+    color:rgb(25, 39, 56);
+    font-size: 41px;
+    padding-left: 50px;
+}
+.plus-payment{
+    color: #4a6076;
+    padding-left: 52px;
+    font-family: sans-serif;
+    font-size: 14.5px;
+    padding-top: 12px;
+}
+.bg-frame1{
+    height:487px;
+}
+.bg-frame11{
+    display: flex;
+    justify-content: end;
+    padding-right: 61px;
+    margin-top: -276px;
+}
+.slide2-img{
+    height: 438px;
+}
+.slide2-img1{
+    display: flex;
+    justify-content: center;
+    margin-top: -438px;
+    padding-left: 250px;
+}
+.powermamaearth{
+    height: 400px;
+}
+.powermamaearth1{
+    display: flex;
+    justify-content: end;
+    margin-top: -400px;
+    padding-right: 148px;
+}
+.ghazal{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(209, 240, 147);
+    display: flex;
+    font-size: 90px;
+    justify-content: center;
+    margin-top: -115px;
+    padding-left: 529px;
+}
+.middle-images2{
+    width: 100%;
+    height: 700px;
+    /* background-color:brown; */
+    background-color: rgb(240, 247, 255);
+}
+.automated-payroll{
+    font-family: sans-serif;
+    color:rgb(48, 94, 255);
+    font-size: 41px;
+    padding-left: 50px;
+    padding-top: 140px;
+}
+.for-india3{
+    font-family: sans-serif;
+    color:rgb(25, 39, 56);
+    font-size: 41px;
+    padding-left: 50px;
+}
+.ap-compliances{
+    color: #4a6076;
+    padding-left: 52px;
+    font-family: sans-serif;
+    font-size: 14.5px;
+    padding-top: 12px;
+}
+.bg-frame2{
+    height:487px;
+}
+.bg-frame22{
+    display: flex;
+    justify-content: end;
+    padding-right: 61px;
+    margin-top: -277px;
+}
+.powerspurplle{
+    height:400px;
+    width:215px;
+}
+.powerspurplle1{
+    display:flex;
+    justify-content:end;
+    margin-top:-400px;
+    padding-right:146px;
+}
+.slide3-img{
+    height: 438px;
+}
+.slide3-img1{
+    display: flex;
+    justify-content: center;
+    margin-top: -438px;
+    padding-left: 290px;
+}
+.manish{
+   font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(209, 240, 147);
+    display: flex;
+    font-size: 80px;
+    justify-content: center;
+    margin-top: -98px;
+    padding-left: 559px;
+}
+.three-slides{
+    display:flex;
+    /* flex-direction: row; */
+}
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+   .logo-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    /* background: linear-gradient(to right, #f8fafc, #f1f5f9); */
+    padding: 30px 0;
+    position: relative;
+    margin-top: -130px;
+  }
+
+  .logo-track {
+    display: inline-block;
+    animation: scroll 25s linear infinite;
+  }
+
+  .logo-track img {
+    height: 40px;
+    margin: 0 20px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .logo-track img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+
+/* .slider{
+
+} */
+.third-page-full{
+    /* background-color: aqua; */
+    height: 6800px;
+    margin-top: -3150px;
+    background-color:rgb(247, 250, 252);
+} 
+#third-page{
+    height: 6800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: anchor-center;
+    /* margin-top: -250px; */
+    /* margin-top: -770px; */
+    /* margin-top: -2755px; */
+    
+}
+.thirtylakhs{
+    border: 14px solid rgb(48, 93, 255);
+    height: 330px;
+    width: 400px;
+    padding-top: 1px;
+    background-color: rgb(48, 93, 255);
+}
+.tl-benefits{
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 36px;
+    padding-left: 20px;
+    padding-top: 50px;
+
+}
+.with{
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 36px;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+.with-razorpay{
+    color: rgb(216, 252, 179);
+    padding-left: 10px;
+}
+.startupperks{
+    color: rgb(216, 252, 179);
+    font-size: 36px;
+    padding-left: 20px;
+    padding-top: 7px;
+    font-family: sans-serif;
+}
+.hrline{
+    width: 325px;
+    background-color:rgb(163, 199, 179) ;
+    height: 2px;
+    border: none;
+}
+.hrline1{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.kmbtn{
+    font-family: sans-serif;
+    padding: 13px 14px;
+    color: rgb(48, 94, 255);
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.kmbtn1{
+    padding-left: 20px;
+    padding-top: 38px;
+}
+.allcombine-image{
+    /* height: 330px;
+    width: 700px; */
+    height: 331px;
+    width: 700px;
+    padding-top: 0px;
+}
+
+.allcombine-image1 {
+    border: 14px solid rgb(48, 94, 255);
+    height: 331px;
+}
+.theall{
+    font-family: sans-serif;
+    font-size: 50px;
+    padding-left: 50px;
+    color: rgb(25, 39, 56);
+    /* margin-top: -236px; */
+}
+.all-three{
+    /* margin-top: -2715px; */
+    margin-top: -3117px;
+    /* margin-top: -770px; */
+    padding-left: 3px;
+}
+.finance-pf{
+    color: rgb(0, 158, 92);
+}
+.you-been{
+    font-family: sans-serif;
+    font-size: 50px;
+    padding-left: 50px;
+    color: rgb(25, 39, 56);
+}
+.fivecombinelists{
+    display:flex;
+    padding-left: 50px;
+    padding-top: 15px;
+    /* gap:15px; */
+}
+.with-r{
+    color:rgb(65, 86, 110);
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+}
+.slash{
+    padding-left: 35px;
+    color: rgb(164, 174, 189);
+}
+.accept-pay{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 25px;
+}
+.make-payouts{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 25px;
+}
+.start-business{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 25px;
+}
+.automate-p{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 25px;
+}
+.get-credit{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 25px;
+}
+/* carts */
+
+.container{
+    margin: 0px 64px;
+    padding-top: 140px;
+    /* height: 432px; */
+    width:90%;
+    /* padding:140px 63px; */
+    position: sticky;
+    top:0px;
+    border-radius: 5px;
+}
+.cart1, .cart2, .cart3, .cart4, .cart5{
+    /* position: sticky;
+    top: 0px; */
+    height: 432px;
+    background-color: white;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+    /* position: relative; */
+}
+.cart1-acceptpayment{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 66px;
+    padding-top: 20px;
+}
+.cart1-flex{
+    display: flex;
+}
+.cart-A{
+    height: 220px;
+    width: 250px;
+    margin: 10px 63px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius:3px;
+}
+.img-a1{
+    /* height: 205px;
+    width: 250px;
+    padding-left: 64px;
+    padding-top: 30px; */
+    height: 220px;
+    width: 250px;
+    /* padding-left: 64px;
+    padding-top: 15px; */
+    border-radius: 3px;
+}
+.a1-paymentgateway{
+    color: rgb(33, 47, 64);
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.a1-offer{
+    color: rgb(99, 99, 99);
+    padding-left:20px;
+    font-size: 12px;
+    padding-top: 10px;
+    font-family: sans-serif;
+}
+
+.a1-onw0rapp{
+    color: rgb(99, 99, 99);
+    padding-left:20px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.a1-signupbtn{
+    background-color: rgb(48, 94, 255);
+    font-weight: bold;
+    color: white;
+    padding: 9px 13px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+}
+.a1-signupbtn1{
+    padding-left:21px;
+    padding-top: 15px;
+    visibility: hidden;
+    opacity: 0;
+}
+.a1-knowmore{
+    color: rgb(41, 79, 217);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left:30px;
+}
+.a1-boxhover{
+    /* height: 120px;
+    width: 250px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    bottom: 40px; */
+
+    height: 80px;
+    width: 250px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    /* background-color: aquamarine; */
+    bottom: 79px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius:3px;
+    /* transition:.3s; */
+}
+.cart-A:hover{
+    cursor: pointer;
+}
+.cart-A:hover .a1-boxhover{
+    height:120px;
+    bottom: 79px;
+    background-color: white;
+}
+.cart-A:hover .a1-signupbtn1{
+    visibility: visible;
+    opacity: 1;
+}
+.cart1:nth-child(2){
+    top:40px;
+}
+.cart1:nth-child(3){
+    top:40px;
+}
+.cart1:nth-child(4){
+    top:40px;
+}
+.cart1:nth-child(5){
+    top:40px;
+}
+.powering-every{
+    color: #192839;
+    font-family: sans-serif;
+    font-size: 49px;
+    padding-left: 50px;
+    padding-top: 80px;
+} 
+.powering-all{
+    color: #192839;
+    font-family: sans-serif;
+    font-size: 49px;
+    padding-left: 50px;
+}
+ /* body { font-family: Arial, sans-serif; margin: 40px; } */
+.nav{
+    display: flex; 
+    gap: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 13px;
+    font-family: sans-serif;
+    margin: 52px;
+}
+.tab{ 
+    position: relative; 
+    cursor: pointer; 
+    color: gray;
+    font-weight: 500;
+}
+.tab:hover{
+    color:rgb(25, 40, 57);
+}
+.tab.active{ 
+    color:rgb(25, 40, 57);
+    font-weight: 600;
+}
+.tab.active::after{
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: teal;
+}
+.tab-content{ 
+    display: none;
+    margin-top: 20px; 
+}
+.tab-content.active{
+    display: block;
+}
+.tab-content .all-imgs { 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: -10px;
+    height:495px;
+    width: 1162px;
+    padding: 0px 53px;
+}  
+.E-Commerce-secimage{
+    /* border: 1px solid; */
+    width: 540px;
+    height: 420px;
+    background-color: white;
+    margin-top: -458px;
+    position: relative;
+    border-radius: 3px;
+    margin-left: 106px;
+}
+.ec-empower{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-size: 39px;
+    padding-left: 38px;
+    padding-top: 43px;
+}
+.ec-business{
+    font-family: sans-serif;
+    font-size: 39px;
+    padding-left: 38px;
+    color:rgb(0, 158, 92);
+} 
+.ec-streamline{
+    font-family: sans-serif;
+    color:rgb(65, 86, 110);
+    padding-left: 39px;
+    padding-top: 2px;
+}
+.ec-streamline1{
+    padding-top: 13px;
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 39px;
+}
+.nykaa{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: fill;
+    /* width: 68px; */
+}
+.ec-nykaa{
+    width: 68px;
+}
+.ec-allimgs{
+    filter: grayscale(1);
+    transform: none;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+    padding-left: 40px;
+    padding-top: 53px;
+}
+.decathlon{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: fill;
+}
+.ec-decathlon{
+    width: 68px;
+}
+.zomato{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: fill;
+}
+.ec-zomato{
+    width: 68px;
+}
+.flipkart{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: fill;
+}
+.ec-flipkart{
+    width: 68px;
+}
+.ec-seesolbtn{
+    background-color: rgb(48, 94, 255);
+    font-weight: bold;
+    color: white;
+    padding: 12px 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+}
+.ec-seesolbtn1{
+    padding-left: 43px;
+    padding-top:37px;
+}
+.fourth-Optimizer{
+    margin-top: 100px;
+    background-color:rgb(240, 244, 250);
+    height: 845px;
+}
+.opt-wehave{
+    color:rgb(25, 40, 57);
+    font-family: sans-serif;
+    font-size: 35px;
+    padding-top: 120px;
+    padding-left: 50px;
+}
+.slider-1-moneysaver{
+    background-color: white;
+    height: 510px;
+    border-radius: 3px;
+    width: 830px;
+    margin-left: 50px;
+    margin-top: 55px;
+}
+.opt-moneysaver{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgb(64, 86, 109);
+    font-weight: 500;
+    padding-left: 35px;
+    padding-top: 35px;
+    font-weight: bold;
+}
+.opt-open{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(48, 93, 255);
+    padding-left: 32px;
+    padding-top: 25px;
+}
+.opt-countries{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(48, 93, 255);
+    padding-left: 32px;
+}
+.opt-countries1{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+}
+.opt-international{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 32px;
+}
+.opt-receive{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 32px;
+}
+.opt-payments{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 32px;
+}
+.opt-receiveiwire{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 34px;
+    padding-top: 73px;
+}
+.opt-signup{
+    background-color: rgb(48, 94, 255);
+    font-weight: bold;
+    color: white;
+    padding: 12px 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+}
+.opt-signup1{
+    padding-left: 34px;
+    padding-top:22px;
+}
+.opt-kmore{
+    font-weight: bold;
+    color: rgb(48, 94, 255);
+    padding: 12px 18px;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.slider-1-moneysaver1{
+    background-color:white;
+    height: 510px;
+    border-radius: 3px;
+    width: 310px;
+    margin-top: 54px;
+    margin-left: 27px;
+}
+.slider-1full{
+    display: flex;
+}
+.opt-turbo{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgb(64, 86, 109);
+    font-weight: 500;
+    font-weight: bold;
+    padding-left: 35px;
+    padding-top: 35px;
+}
+.opt-experience{
+    color: rgb(48, 94, 255);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 28px;
+}
+.opt-checkout{
+    color: rgb(48, 94, 255);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.opt-checkout1{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.opt-10{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.opt-boost{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.opt-redirections{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.opt-apps{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.opt-get{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 110px;
+}
+.opt-upi{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 3px;
+}
+.opt-business{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 3px;
+}
+.slider-2-lineofcredit{
+    background-color:white;
+    height: 510px;
+    border-radius: 3px;
+    width: 310px;
+    margin-top: 54px;
+    margin-left: 50px;
+}
+.slider-2full{
+    display: flex;
+}
+.loc-line{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgb(64, 86, 109);
+    font-weight: 500;
+    font-weight: bold;
+    padding-left: 35px;
+    padding-top: 35px;
+}
+.loc-get{
+    color: rgb(48, 94, 255);
+    padding-left: 34px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 28px;
+}
+.loc-freecredit{
+    color: rgb(48, 94, 255);
+    padding-left: 35px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.loc-freecredit1{
+    color:rgb(65, 86, 110);
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.loc-low{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.loc-interest{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.loc-closure{
+    color:rgb(65, 86, 110);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.loc-tackle{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 145px;
+}
+.loc-with{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 4px;
+}
+.loc-new{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 4px;
+
+}
+.slider-2-moneysaver2{
+    background-color: white;
+    height: 510px;
+    border-radius: 3px;
+    width: 830px;
+    margin-left: 26px;
+    margin-top: 55px;
+}
+.loc-magic{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgb(64, 86, 109);
+    font-weight: 500;
+    padding-left: 35px;
+    padding-top: 35px;
+    font-weight: bold;
+}
+.loc-witness{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(48, 93, 255);
+    padding-left: 37px;
+    padding-top: 25px;
+}
+.loc-conversions{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(48, 93, 255);
+    padding-left: 37px;
+}
+.loc-conversions1{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+}
+.loc-checkoutprocess{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 37px;
+}
+.loc-by{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 37px;
+}
+.loc-grow{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 123px;
+}
+.slider-3-PayoutsPro{
+    background-color: white;
+    height: 510px;
+    border-radius: 3px;
+    width: 830px;
+    margin-left: 50px;
+    margin-top: 55px;
+}
+.slider-3full{
+    display: flex;
+}
+.pp-optimizer{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgb(64, 86, 109);
+    font-weight: 500;
+    padding-left: 35px;
+    padding-top: 35px;
+    font-weight: bold;
+}
+.pp-utilise{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(48, 93, 255);
+    padding-left: 32px;
+    padding-top: 25px;
+}
+.pp-aggregators{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(48, 93, 255);
+    padding-left: 32px;
+}
+.pp-aggregators1{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+}
+.pp-by{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 32px;
+}
+.pp-charges{
+    font-family: sans-serif;
+    font-size: 42px;
+    color: rgb(25, 39, 56);
+    padding-left: 32px;
+}
+.pp-manage{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 34px;
+    padding-top: 130px;
+}
+.slider-3-PayoutsPro3{
+    background-color: white;
+    height: 510px;
+    border-radius: 3px;
+    width: 310px;
+    margin-top: 54px;
+    margin-left: 25px;
+}
+.pp-payouts{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgb(64, 86, 109);
+    font-weight: 500;
+    font-weight: bold;
+    padding-left: 35px;
+    padding-top: 35px;
+}
+.pp-auto{
+    color: rgb(48, 94, 255);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 28px;
+}
+.pp-routing{
+    color: rgb(48, 94, 255);
+    padding-left: 37px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.pp-multiple{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(48, 93, 255);
+    padding-left: 37px;
+}
+.pp-multiple1{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(25, 39, 56);
+}
+.pp-achieve{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(25, 39, 56);
+    padding-left: 37px;
+}
+.pp-success{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(25, 39, 56);
+    padding-left: 37px;
+}
+.pp-downtime{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(25, 39, 56);
+    padding-left: 37px;
+}
+.pp-a-unbeatable{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 110px;
+}
+.pp-success{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 3px;
+}
+.pp-dynamic{
+    font-family: sans-serif;
+    color: rgb(65, 86, 110);
+    padding-left: 37px;
+    padding-top: 3px;
+}
+#sliders-container{
+    display: flex;
+}
+.prev1 .next1{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 3px;
+}
+
+.prev1:hover .next1:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev1{
+   left: 10px;
+}
+
+.next1{
+    right: 10px;
+}
+.fourth-prev{
+    margin-left: -615px;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+.fourth-nxt{
+    margin-top: 10px;
+}
+
+#sixty-autoscroll{
+    background-color:rgb(3, 42, 61);
+    height: 600px;
+}
+#infinite-scroll{
+    padding-top: 19px;
+}
+.stock-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    border-block: 1px solid;
+    background-color: rgb(0, 158, 92);
+    padding: 20px 0;
+}
+.scroll-content {
+    display: inline-block;
+    animation: scroll 25s linear infinite;
+}
+.scroll-content span {
+    margin: 0 2rem;
+    color: rgb(19, 38, 69);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+@keyframes scroll {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%);
+    }
+}
+.inf-razorpay{
+    color: white;
+    font-family: sans-serif;
+    font-size: 55px;
+    padding-left: 40px;
+    padding-top: 115px;
+}
+.inf-dev{
+    color: rgb(0, 158, 92);
+    font-family: sans-serif;
+    font-size: 55px;
+    padding-left: 40px;
+}
+.inf-integration{
+    color: white;
+    font-family: sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding-left: 45px;
+    padding-top: 100px;
+}
+.inf-find{
+    color: #40566d;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-left: 45px;
+    padding-top: 15px;
+    font-weight: bold;
+}
+.inf-server{
+    color: #40566d;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-left: 45px;
+    font-weight: bold;
+    padding-top: 4px;
+}
+#inf-flex{
+    display: flex;
+    gap: 4rem;
+}
+#nad-seventh{
+    background-color: #f1f5fa;
+    height: 630px;
+}
+.nad-what{
+    font-family: sans-serif;
+    color: rgb(118, 141, 166);
+    font-size: 20px;
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.nad-not{
+    font-family: sans-serif;
+    padding-left: 50px;
+    color: rgb(0, 158, 92);
+    font-size: 45px;
+    padding-top: 10px;
+}
+.nad-ournocode{
+    font-family: sans-serif;
+    padding-left: 50px;
+    color: rgb(25, 39, 56);
+    font-size: 45px;
+    padding-top: 10px;
+}
+#nad-sixboxes{
+    border: 1px solid;
+    width: 325px;
+    height: 235px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+}
+.nad-payment{
+    font-family: sans-serif;
+    color: rgb(39, 53, 69);
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.nad-accept{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.nad-share{
+    color: rgb(48, 93, 255);
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.nad-share1{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nad-social{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.nad-signup{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(48, 93, 255);
+    padding-left: 20px;
+    padding-top: 70px;
+}
+.nad-signup1{
+    padding-left: 15px;
+}
+#nad-infinitescroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -1235px;
+    gap: 89px;
+    padding-top: 60px;
+}
+  
+    /* .prev1 .next1{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 3px;
+  }
+
+  .prev1:hover .next1:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .prev1{
+    left: 10px;
+  } */
+
+  /* .next1{
+    right: 10px;
+  } */
+
+
+
+#eigth-page{
+    height: 800px;
+    background-color: white;
+}
+.rzp-grows{
+    color: rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    padding-left:48px;
+}
+.rzp-grows1{
+    color:rgb(48, 93, 255);
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+.rzp-businesses{
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 18px;
+    padding-left: 290px;
+}
+.rzp-flex{
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+ .slider-one {
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide-track {
+    display: flex;
+    width: calc(380px * 12); /* 6 cards * 2 for looping */
+    height: calc(365px * 12);
+    animation: scroll 35s linear infinite;
+  }
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 6)); }
+  }
+
+  .flip-box {
+    background-color: transparent;
+    width: 380px;
+    height: 365px;
+    perspective: 1000px;
+    margin: 0 10px;
+    flex-shrink: 0;
+
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 100px;
+  }
+
+  .flip-box-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .flip-box-back {
+    background-color:black;
+    color:white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .paragraph-photo {
+    font-size: 20px;
+    /* margin-top: 6px; */
+    font-family: sans-serif;
+  }
+
+
+#ninety-page{
+    height:370px;
+    background-color:rgb(240, 244, 250);
+}
+.sc-super{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.sc-with{
+    color:rgb(25, 39, 56);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+
+
+#tenty-page{
+    height:1050px;
+    background-color:white;
+}
+.razorpaylogo{
+    width: 125px;
+    height: 120px;
+    cursor: pointer;
+}
+.end-razorpay{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-top: -25px;
+}
+.end-allows{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-payment{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-to{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-card{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-jio{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-money{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-razorpayx{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-top: 20px;
+}
+.end-exp{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-excellence{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-rzpx{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-functional{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-payouts{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-manage{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-top: 20px;
+}
+.end-collect{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-customers{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-single{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-threerazorpay{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-disclaimer{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-top: 20px;
+}
+.end-account{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-provided{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-powered{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-banks{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-rbi{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.end-does{
+    color:rgb(137, 150, 169);
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.pci-img{
+    height: 40px;
+}
+.iso-img{
+    height: 74px;
+    display: flex;
+    padding-left: 105px;
+    margin-top: -45px;
+}
+.end-img{
+    padding-top: 25px;
+}
+.aicpa-img{
+    height: 70px;
+}
+.etwo-accept{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+}
+.etwo-payment{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-paygateway{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-paypages{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-paylinks{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-razorpaypos{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-qr{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-subscriptions{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-smart{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-optimizer{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-instant{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-payroll{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.etwo-rzpxppayroll{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-become{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.etwo-refer{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-onboarding{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-more{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.etwo-route{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-invoices{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-freelancer{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-international{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-checkout{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-upi{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-epos{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.etwo-codemo{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-banking{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.ethree-razorpayx{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-source{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-current{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-payouts{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-polinks{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-corporate{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-developers{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.ethree-docs{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-integrations{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-api{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-resources{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.ethree-blog{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-learn{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-customer{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-events{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-chargeback{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-settlement{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-solutions{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.ethree-education{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-ecommerce{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-saas{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-bfsi{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-free{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.ethree-gst{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-gstnumber{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-gstpan{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-roi{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-cagr{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.ethree-ebitda{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-company{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.efour-about{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-carreer{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-terms{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-privacy{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-grievance{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-responsible{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px; 
+}
+.efour-partners{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px; 
+}
+.efour-white{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-corporate{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-help{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.efour-support{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-klbase{
+    color: rgb(41, 80, 218);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.efour-find{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.end-xmark{
+    height: 24px;
+}
+.efour-regd{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-top: 25px;
+}
+.efour-razorpay{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 10px;
+}
+.efour-floor{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+.efour-laskar{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+.efour-bengaluru{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+.efour-karnataka{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+.efour-cin{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+.efour-rzp{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 25px; 
+}
+.efour-all{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+.efour-rsl{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 25px; 
+}
+.efour-rspl{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px; 
+}
+.efour-authorised{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(137, 150, 169);
+    padding-top: 3px;
+}
+#end-container{
+    display: flex;
+    justify-content: space-around;
+}
+#endtwo{
+    padding-top: 48px;
+}
+#endthree{
+    padding-top: 21px;
+}
+#endfour{
+    padding-top: 21px;
+}
+.dec-payment{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-left: 230px;
+    padding-top: 60px;
+}
+.dec-anrbi{
+    font-family: sans-serif;
+    color: rgb(64, 86, 109);
+    font-size: 14px;
+    padding-left: 479px;
+    padding-top: 5px;
+}
